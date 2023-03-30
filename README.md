@@ -1,1 +1,1 @@
-# Capstone-projects--to-portfolio-
+Project to my portfolio showing my first acquired skills.
