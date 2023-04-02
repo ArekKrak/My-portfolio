@@ -56,5 +56,5 @@ if calc_type == "bond":
     interest_rate = int(input("Please, enter the interest rate: "))
     months = int(input("Please, enter the number of months you plan to take to repay the bond: "))
     i = (interest_rate / 100) / 12
-    rep_formula = round((i * value)/(1 - (1 + i)**(-months)))
+    rep_formula = round((i * value)/(1 - (1 + i)**(-months)), 2)
     print("\nThe total amount to repay each month, at the " + str(interest_rate) + "% rate is £" + str(rep_formula) + ".")
