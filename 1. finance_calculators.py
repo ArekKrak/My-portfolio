@@ -4,14 +4,14 @@
    I used the 'format' function to determine that point.
 3. I created a variable to store the user's input and appended the 'lower()' method so that the user's input 
    never affects how the program proceeds.
-4. The first 'if' condition checks whether the input is correct; if not, the error message will pop up and prompt 
-   the user to try again.
+4. I set a 'while' loop to check if a user enters a valid value; if not, the error message will pop up, and they will be 
+   prompted to try again until they succeed every time they mistype the answer.
 5. I've set a block of nested 'if' conditions to perform the following operations:
     5a. If the user types "investment" in, they're asked to give some figures like the amount of money to be paid in, 
         interest rate, and the number of years.
     5b. The user is next asked to choose a simple or compound interest by the 'input' statement.
-    5c. Of course, if they happen to mistype the answer, they will then receive an error and will be prompted
-        to try again.
+    5c. Of course, if the user mistypes the answer, they will receive an error, after which they will be prompted to try again, 
+        in the same way as in point 4.
     5d. The variables containing all calculations were set, as given in the 'Interest formula'. Also, I wrapped 
         the values of those variables with 'round()' function to round the outcome to two decimals, which originally 
         was out of control.
@@ -26,21 +26,21 @@
 
 import math
 
-print("\t\t\tFINANCIAL CALCULATORS\n")
+print("\n\t\t\tFINANCIAL CALCULATORS\n")
 print(f"{'investment':<11}- to calculate the amount of interest you'll earn on your investment")
 print(f"{'bond':<11}- to calculate the amount you'll have to pay on a home loan")
 calc_type = input("\nEnter either 'investment' or 'bond' from the menu above to proceed: ").lower()
 
-if calc_type != "investment" and calc_type != "bond":
-    print("Incorrect input. Please, try again.")
+while calc_type != "investment" and calc_type != "bond":
+    calc_type = input("\nIncorrect input. Please, try again: ").lower()
 
 if calc_type == "investment":
     amount = int(input("\nPlease, enter the amount you want to deposit: £"))
     interest_rate = int(input("Please, enter the interest rate: "))
     years = int(input("Please, enter the number of years you want to invest for: "))
     interest = input("Do you want \"simple\", or \"compound\" interest? ").lower()
-    if interest != "simple" and interest != "compound":
-        print("Incorrect input. Please, try again.")
+    while interest != "simple" and interest != "compound":
+        interest = input("\nIncorrect input. Please, try again: ").lower()
     r = interest_rate / 100
     simple_int = round(amount*(1 + r*years), 2)
     comp_int = round(amount * math.pow((1+r), years), 2)
