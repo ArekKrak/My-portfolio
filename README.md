@@ -1,1 +1,1 @@
-Project to my portfolio showing my first acquired skills.
+Projects to my portfolio to demonstrate my skills.
