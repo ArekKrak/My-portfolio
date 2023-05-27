@@ -22,7 +22,7 @@
 3. To ensure a user-friendly experience of the application, I included the user-operated part
    within a 'try-except' block in the event of interrupting the application by the user.
 4. The application is a contact form (rudimentary, though as for ciphers absolutely ok) consisting
-   of the subject, text box, and e-mail address box; all well-formatted to ensure a positiv user 
+   of the subject, text box, and e-mail address box; all well-formatted to ensure a positive user 
    experience. """
 
 def cipher(plaintext):
